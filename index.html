@@ -125,12 +125,27 @@
           <h1 class="jumbotron-heading">Album API example</h1>
           <p class="lead text-muted">This page will dynamically load pictures from the web, and display them in a cool way!</p>
           <p>
-            <a id="loadFirst" href="#" class="btn btn-primary my-2">Load Images</a>
-            <a id="loadSecond" href="#" class="btn btn-secondary my-2">Load Secondary Images</a>
+            <button id="loadFirst" href="#" class="btn btn-primary my-2">
+              Load Images
+              <div id="firstSpinner" class="spinner-border spinner-border-sm d-none" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </button>
+            <button id="loadSecond" href="#" class="btn btn-secondary my-2">
+              Load Secondary Images
+              <div id="secondSpinner" class="spinner-border spinner-border-sm d-none" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </button>
           </p>
           <form id="formSearch" class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" required />
+            <button class="btn btn-outline-success d-flex align-items-center gap-2" type="submit">
+              Search
+              <div id="searchSpinner" class="spinner-border spinner-border-sm d-none" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </button>
           </form>
         </div>
       </section>
